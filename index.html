@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My campus planner</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>My campus planner</h1>
+    </header>
+    
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tasks">Task List</a></li>
+                <li><a href="#add-tasks">Add tasks</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="all">
+    <section class="welcome">
+        <h2>Welcome to My Campus Planner</h2>
+        <p>This is a simple web application to help you plan your campus activities and schedule.</p>
+    </section> 
+    <section class="dashboard" id="dashboard">
+        <h1>Dashboard</h1>
+        <div class="stats">
+            <div>
+                <h3 id="total-tasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+            <div>
+                <h3 id="total-duration">0 min</h3>
+                <p>Total Time</p>
+            </div>
+            <div>
+                <h3 id="top-tag">-</h3>
+                <p>Top Tag</p>
+            </div>
+            <div>
+                <h3 id="weekly-tasks">0 </h3>
+                <p>Weekly Tasks</p>
+            </div>
+        </div>
+        </section>
+    <section class="task-list" id="tasks">
+        <h1>Task List</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search tasks or use regex...">
+            <label>
+                <input type="checkbox" id="case-sensitive"> Case Sensitive
+            </label>
+            <select id="sort-selecting">
+                <option value="date">sort by date</option> 
+                <option value="title">sort by title</option>
+                <option value="duration">sort by duration</option>
+            </select>
+            </div>
+            <p id="search-message"></p>
+            <table>
+                <thead id="task-list-header">
+                    <tr>
+                        <th>Title</th>
+                        <th>Due Date</th>
+                        <th>Duration</th>
+                        <th>Tag</th>
+                        <th>Actions</th>                        
+                    </tr>
+                </thead>
+                <tbody id="task-list">
+                </tbody>
+                </table>
+                <button id="clear-tasks" type="button">Clear All Tasks</button>
+    </section>
+    <section class="add-tasks">
+   
+        <form class="task-form" id="task-form">
+            ...
+            <h2>Add Task</h2>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="due-date">Due date:</label>
+            <input type="date" id="due-date" name="due-date" required>
+            <label for="duration">Duration (minutes):</label>
+            <input type="text" id="duration" name="duration" required>
+            <label for="tag">Tag:</label>
+            <input type="text" id="tag" name="tag" placeholder="Example: study" required>
+            <button type="submit" id="submit">Add Task</button>
+            <p id="form-message"></p>
+        </form>
+        </section>
+    <section class="about" id="about">
+        <h2>About</h2>
+        <p>This campus helps students organise their tasks,
+            manage their time and keep track of campus activities.
+        </p>
+    </section>
+    <section class="settings" id="settings">
+        <h2>Settings</h2>
+            <label for="duration-cap">Time Target (minutes):</label>
+            <input type="number" id="duration-cap" name="duration-cap" min="0">
+            <p id="cap-message"></p>
+            <button id="export-data" type="button">Export Data</button>
+            <label for="import-data">Import Data:</label>
+            <input type="file" id="import-data" name="import-data" accept=".json">
+            <p id="data-message"></p>
+        </section>
+    </main>
+        <script src="./script/index.js"></script>
+</body>
+</html>

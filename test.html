@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planner Tests</title>
+    </head>
+    <body>
+        <h1>Campus Planner Tests</h1>
+        <button onclick="runTests()">Run Test</button>
+        <p id="result" role="status" aria-live="polite"></p>
+        <script>
+            function runTests(){
+                const tests=[  /^\S(?:.*\S)?$/.test("Study JavaScript"),
+                /^(0|[1-9]\d*)(\.\d{1,2})?$/.test("45.50"),
+                /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test("2026-10-20"),
+                /^[A-Za-z]+(?:[ -][A-Za-z]+)*$/.test("Group-Work"),
+                /\b(\w+)\s+\1\b/i.test("study study")];
+
+                const passed=tests.filter(Boolean).length;
+                document.getElementById("result").textContent=passed+"out of"+tests.length+"tests passed";
+            }
+        </script>
+    </body>
+</html>
