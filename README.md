@@ -52,4 +52,4 @@ Use `seed.json` to test JSON import with at least 10 sample tasks.
 - Email: u.ndegeya@alustudent.com
 
 ## Deployment
-GitHub Pages: YOUR-GITHUB-PAGES-URL
+GitHub Pages: https://undegeya.github.io/my-campus-plannner/
