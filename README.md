@@ -20,8 +20,8 @@ My-Campus-Planner/
 ├── index.html
 ├── tests.html
 ├── seed.json
-├── codePause_reports/
-│   └── codePause-78.report
+├── codePause-reports/
+│   └── codepause-export-1792308062041.json
 ├── style/
 │   └── index.css
 ├── script/
